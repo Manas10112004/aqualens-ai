@@ -25,7 +25,7 @@ async def get_conservation_advice(request: ChatRequest):
     # ... (Keep your existing chat logic here) ...
     try:
         completion = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": "You are a specialized Marine Biologist Agent..."},
                 {"role": "user", "content": request.message}

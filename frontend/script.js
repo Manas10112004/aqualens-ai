@@ -10,7 +10,7 @@ async function sendChatMessage() {
     inputField.value = '';
 
     try {
-        // CHANGED: Removed "http://127.0.0.1:8000" prefix. 
+        // CHANGED: Removed "http://127.0.0.1:8000" prefix.
         // Now it works on both localhost and Render automatically.
         const response = await fetch('/chat', {
             method: 'POST',
