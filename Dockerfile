@@ -9,9 +9,10 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 # Install system dependencies
-# (We include libgl1 now so it's ready for OpenCV/YOLO later)
+# UPDATED: We replaced libgl1-mesa-glx with libgl1 and libglib2.0-0
 RUN apt-get update && apt-get install -y \
-    libgl1-mesa-glx \
+    libgl1 \
+    libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the dependencies file
@@ -27,5 +28,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to run the application
-# We use host 0.0.0.0 so it is accessible externally
 CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
