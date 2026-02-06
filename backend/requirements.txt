@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+groq
+pydantic
+python-multipart
+jinja2
+# We will add these later for the Computer Vision part:
+# opencv-python-headless
+# ultralytics

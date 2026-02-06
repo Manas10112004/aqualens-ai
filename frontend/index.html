@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaLens AI | Conservation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">💧 AquaLens AI</div>
+            <div class="nav-links">
+                <span>Identify</span>
+                <span>Chat</span>
+                <span>Threats</span>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <h1>Discover Life Explorer & Below Water</h1>
+        </header>
+
+        <section class="dashboard-grid">
+            <div class="card">
+                <h3>Marine Life Identification</h3>
+                <div class="upload-zone" id="upload-zone">
+                    <p>Click or Drag Image Here</p>
+                    <input type="file" id="imageInput" hidden>
+                </div>
+            </div>
+
+            <div class="card chat-card">
+                <h3>Conservation Chat</h3>
+                <div class="chat-display" id="chat-display">
+                    <p class="bot-text">Hello! Ask me about marine ecosystems.</p>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="user-input" placeholder="How does plastic affect reefs?">
+                    <button onclick="sendChatMessage()">Send</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Learn More</h3>
+                <button class="action-btn">Explore Threats</button>
+                <button class="action-btn">Find Ways to Help</button>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
