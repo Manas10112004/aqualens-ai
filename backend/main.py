@@ -27,9 +27,11 @@ async def get_conservation_advice(request: ChatRequest):
         completion = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                {"role": "system", "content": "You are a specialized Marine Biologist Agent..."},
+                {
+                    "role": "system",
+                    "content": "You are a specialized Marine Biologist Agent for AquaLens AI. Keep answers extremely concise (max 2 sentences). Focus only on facts and solutions."
+                },
                 {"role": "user", "content": request.message}
-            ],
         )
         return {"response": completion.choices[0].message.content}
     except Exception as e:
